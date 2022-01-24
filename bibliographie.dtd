@@ -1,0 +1,10 @@
+<!ELEMENT bibliographie (titre,article*,livre*)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT article (titre,auteurs,uri)>
+<!ATTLIST article type CDATA #REQUIRED>
+<!ELEMENT auteurs (nom+,editeur?)>
+<!ELEMENT nom ( #PCDATA)>
+<!ELEMENT editeur ( #PCDATA)>
+<!ELEMENT uri ( #PCDATA)>
+<!ELEMENT livre (titre,auteurs)>
+<!ATTLIST livre xml:lang CDATA  #REQUIRED>

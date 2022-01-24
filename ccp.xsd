@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="livre-de-comptes">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element  ref="valeur-initiale" maxOccurs="1" minOccurs="1"/>
+            <xsd:element  ref="retrait" maxOccurs="unbounded"/>
+            <xsd:element  ref="depot" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+<xsd:element name="valeur-initiale"  type="xsd:string"  />
+<xsd:element name="retrait" >
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element  name="destinataire" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+            <xsd:element  ref="montant" maxOccurs="1" minOccurs="1"/>
+            <xsd:element  ref="date" maxOccurs="1" minOccurs="1"/>
+            <xsd:element  ref="description" maxOccurs="1" minOccurs="1"/>
+        </xsd:sequence>
+        <xsd:attribute name="type" use="required">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="cheque"/>
+                        <xsd:enumeration value="distributeur"/>
+                        <xsd:enumeration value="debit"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:attribute>
+        <xsd:attribute  name="numero" type="xsd:integer" use="optional" />
+    </xsd:complexType>
+</xsd:element>
+<xsd:element name="depot">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="payeur" type="xsd:string" maxOccurs="1" minOccurs="1" />
+            <xsd:element  ref="montant" maxOccurs="1" minOccurs="1"/>
+            <xsd:element  ref="date" maxOccurs="1" minOccurs="1"/>
+            <xsd:element  ref="description" maxOccurs="1" minOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>  
+<xsd:element name="montant" type="xsd:float" />
+<xsd:element name="date" type="xsd:date" />
+<xsd:element name="description"  type="xsd:string">
+    <xsd:complexType>
+        <xsd:attribute  name="categorie" type="xsd:string" use="required" />
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><livre-de-comptes>
+        <valeur-initiale>14826.25</valeur-initiale>
+        <retrait type="distributeur">
+            <montant>1000.00</montant>
+            <date>2021-08-07</date>
+            <description categorie="vacances">Billet de train oran</description>
+        </retrait>
+        <retrait type="distributeur">
+            <montant>3500.00</montant>
+            <date>2021-09-07</date>
+            <description categorie="Liquide">Argent de poche</description>
+        </retrait>
+        <retrait type="distributeur">
+            <montant>1000.00</montant>
+            <date>2021-09-07</date>
+            <description categorie="Frais">Ligne Mobilis</description>
+        </retrait>
+        <retrait numero="2106" type="cheque">
+            <destinataire>Auberge</destinataire>
+            <montant>1200</montant>
+            <date>2021-10-07</date>
+            <description categorie="vacances">Auberge des jeunes</description>
+        </retrait>
+        <depot type="direct">
+            <payeur>DOU</payeur>
+            <montant>4000.00</montant>
+            <date>2021-03-07</date>
+            <description categorie="Bourse">Bource du 3eme trimestre</description>
+        </depot>
+        <depot type="direct">
+            <payeur>CNAS</payeur>
+            <montant>625.27</montant>
+            <date>2021-18-07</date>
+            <description categorie="Remboursement">Analyse Medicales</description>
+        </depot>
+    </livre-de-comptes>

@@ -1,0 +1,14 @@
+<!ELEMENT livre-de-comptes (valeur-initiale+,retrait*,depot*)>
+<!ELEMENT valeur-initiale (#PCDATA)>
+<!ELEMENT retrait (destinataire?,montant,date,description)>
+<!ELEMENT depot (payeur,montant,date,description)>
+<!ELEMENT destinataire (#PCDATA)>
+<!ELEMENT montant (#PCDATA)>
+<!ELEMENT description (#PCDATA) >
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT payeur (#PCDATA)>
+
+<!ATTLIST retrait type (cheque|distributeur|debit) #REQUIRED >
+<!ATTLIST depot type CDATA #IMPLIED >
+<!ATTLIST description categorie CDATA #REQUIRED >
+<!ATTLIST retrait numero CDATA #IMPLIED>

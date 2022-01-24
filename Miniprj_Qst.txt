@@ -1,0 +1,28 @@
+Partie 3 : Requêtes XPath 
+	1)
+	command  : xmllint shop.xml --xpath "/shop/article[@prix_vente<1000]"                                                                                                                                 10 ⨯
+	output :	<article prix_achat="350" prix_vente="800">
+							<nom>Bougie fleurs</nom>
+							<fournisseur>TPC</fournisseur>
+							<qtity>133</qtity>
+							<nb_ventes>43</nb_ventes>
+						</article>
+
+	2)
+	commnd :  xmllint shop.xml --xpath '/shop/article[fournisseur/text()="Meuble Royal"]/nom/text()'
+    output     :  table basse
+	
+	3)
+	command  :  xmllint shop.xml --xpath  '/shop/article[qtity/text()<nb_ventes/text()]/fournisseur'
+	output		  : <fournisseur>Les Frères Artisans</fournisseur>
+	
+	4)
+		command :  xmllint shop.xml --xpath  '/shop/article[((@prix_vente - @prix_achat) div  @prix_vente)< 0.2 ]'                                                                                            10 ⨯
+		output:	<article prix_achat="4000" prix_vente="4990">
+							<nom>Tabouret</nom>
+							<fournisseur>Les Frères Artisans</fournisseur>
+							<qtity>2</qtity>
+							<nb_ventes>10</nb_ventes>
+						</article>
+	
+	5) 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shop>
+    <article prix_achat='1500' prix_vente= '22500' >
+        <nom>table basse</nom>
+        <fournisseur>Meuble Royal</fournisseur>
+        <qtity>15</qtity>
+        <nb_ventes>3</nb_ventes>
+    </article>
+    <article prix_achat='350' prix_vente='350'>
+        <nom>Bougie fleurs</nom>
+        <fournisseur>TPC</fournisseur>
+        <qtity>133</qtity>
+        <nb_ventes>43</nb_ventes>
+    </article>
+    <article prix_achat='4000' prix_vente='4990'>
+        <nom>Tabouret</nom>
+        <fournisseur>Les Frères Artisans</fournisseur>
+        <qtity>2</qtity>
+        <nb_ventes>10</nb_ventes>
+    </article>
+</shop>
